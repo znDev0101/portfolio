@@ -1,5 +1,3 @@
-import React from "react";
-import ParallaxTextSkills from "../../parallax/ParallaxTextSkills";
 import SkillsIcons from "../../SkillsIcons";
 import ToolsIcons from "../../ToolsIcons";
 
@@ -10,13 +8,6 @@ const SkillsSection = () => {
         <SkillsIcons />
         <ToolsIcons />
       </div>
-      {/* <ParallaxTextSkills baseVelocity={-3}>
-        React Js Next Js
-      </ParallaxTextSkills>
-      <ParallaxTextSkills baseVelocity={3}>
-        MongoDB PostgreSQL MySQL
-      </ParallaxTextSkills>
-      <ParallaxTextSkills baseVelocity={-3}>Prisma</ParallaxTextSkills> */}
     </section>
   );
 };

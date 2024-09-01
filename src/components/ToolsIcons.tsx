@@ -1,5 +1,3 @@
-import React from "react";
-
 const ToolsIcons = () => {
   return (
     <div className='flex flex-col gap-y-5 flex-wrap flex-1'>

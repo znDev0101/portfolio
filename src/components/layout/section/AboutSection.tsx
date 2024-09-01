@@ -1,4 +1,3 @@
-import React from "react";
 import ImageAbout from "../../ImageAbout";
 
 const AboutSection = () => {

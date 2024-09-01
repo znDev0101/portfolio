@@ -1,4 +1,3 @@
-import React from "react";
 import Introdaction from "../../Introdaction";
 import ImageHero from "../../ImageHero";
 
