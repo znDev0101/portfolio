@@ -1,7 +1,7 @@
 const SkillsIcon = () => {
   return (
     <div className='flex flex-col gap-y-4 flex-1'>
-      <h1 className='text-2xl'>Soft Skills</h1>
+      <h1 className='text-2xl font-semibold'>Soft Skills</h1>
       <div className='flex flex-wrap gap-6 lg:gap-7'>
         <div className='flex flex-col items-center'>
           <svg

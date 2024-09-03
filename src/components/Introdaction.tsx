@@ -6,7 +6,7 @@ const Introdaction = () => {
           Hi, I'm Zulfa you can call me JULPA
         </h1>
         <p className='mt-4 text-center lg:text-start'>
-          I'm a Frontend Web developer with 2 years experience Using React and
+          I'm a Frontend Web developer with 2 years experience using React and
           NextJs, and much more i learn
         </p>
         <span className='italic text-[#bdc5c5] text-center lg:text-start'>

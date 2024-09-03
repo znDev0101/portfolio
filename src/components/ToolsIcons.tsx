@@ -1,7 +1,7 @@
 const ToolsIcons = () => {
   return (
     <div className='flex flex-col gap-y-5 flex-wrap flex-1'>
-      <h1 className='text-2xl'>Tools</h1>
+      <h1 className='text-2xl font-semibold'>Tools</h1>
       <div className='flex gap-x-7'>
         <div className='flex flex-col items-center'>
           <svg

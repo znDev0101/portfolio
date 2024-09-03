@@ -4,7 +4,7 @@ import { useDimensions } from "../../hooks/useDimentions";
 import MenuToggle from "../ui/MenuToggle";
 import Navigation from "../ui/Navigation";
 
-const Navbar = () => {
+const Navbar = ({ aboutRef, skillsRef, projectsRef, contactRef }: any) => {
   const sidebar = {
     open: (height = 1000) => ({
       clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
@@ -40,23 +40,43 @@ const Navbar = () => {
         custom={height}
         ref={containerRef}
       >
-        <motion.div
-          className='absolute top-0 bottom-0 left-0 bg-white lg:hidden'
+        {/* <motion.div
+          className='absolute top-10 right-0 bg-white'
           variants={sidebar}
         />
         <Navigation />
-        <MenuToggle toggle={() => toggleOpen()} />
+        <MenuToggle toggle={() => toggleOpen()} /> */}
         <ul className='hidden lg:flex gap-x-10 text-[#fa6743] '>
-          <li className='hover:text-[#fa6743] hover:cursor-pointer font-semibold'>
+          <li
+            className='hover:text-[#fa6743] hover:cursor-pointer font-semibold'
+            onClick={() =>
+              aboutRef.current.scrollIntoView({ behavior: "smooth" })
+            }
+          >
             About
           </li>
-          <li className='hover:text-[#fa6743] hover:cursor-pointer font-semibold'>
+          <li
+            className='hover:text-[#fa6743] hover:cursor-pointer font-semibold'
+            onClick={() =>
+              skillsRef.current.scrollIntoView({ behavior: "smooth" })
+            }
+          >
             Skills
           </li>
-          <li className='hover:text-[#fa6743] hover:cursor-pointer font-semibold'>
+          <li
+            className='hover:text-[#fa6743] hover:cursor-pointer font-semibold'
+            onClick={() =>
+              projectsRef.current.scrollIntoView({ behavior: "smooth" })
+            }
+          >
             Projects
           </li>
-          <li className='hover:text-[#fa6743] hover:cursor-pointer font-semibold'>
+          <li
+            className='hover:text-[#fa6743] hover:cursor-pointer font-semibold'
+            onClick={() =>
+              contactRef.current.scrollIntoView({ behavior: "smooth" })
+            }
+          >
             Contact
           </li>
         </ul>
