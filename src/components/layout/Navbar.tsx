@@ -1,31 +1,31 @@
 import { motion, useCycle } from "framer-motion";
 import { useRef } from "react";
 import { useDimensions } from "../../hooks/useDimentions";
-import MenuToggle from "../ui/MenuToggle";
-import Navigation from "../ui/Navigation";
+// import MenuToggle from "../ui/MenuToggle";
+// import Navigation from "../ui/Navigation";
 
 const Navbar = ({ aboutRef, skillsRef, projectsRef, contactRef }: any) => {
-  const sidebar = {
-    open: (height = 1000) => ({
-      clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
-      transition: {
-        type: "spring",
-        stiffness: 20,
-        restDelta: 2,
-      },
-    }),
-    closed: {
-      clipPath: "circle(30px at 40px 40px)",
-      transition: {
-        delay: 0.3,
-        type: "spring",
-        stiffness: 400,
-        damping: 40,
-      },
-    },
-  };
+  // const sidebar = {
+  //   open: (height = 1000) => ({
+  //     clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
+  //     transition: {
+  //       type: "spring",
+  //       stiffness: 20,
+  //       restDelta: 2,
+  //     },
+  //   }),
+  //   closed: {
+  //     clipPath: "circle(30px at 40px 40px)",
+  //     transition: {
+  //       delay: 0.3,
+  //       type: "spring",
+  //       stiffness: 400,
+  //       damping: 40,
+  //     },
+  //   },
+  // };
 
-  const [isOpen, toggleOpen] = useCycle(false, true);
+  const [isOpen] = useCycle(false, true);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
 
