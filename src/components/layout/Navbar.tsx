@@ -14,10 +14,10 @@ const Navbar = ({
 
   return (
     <header
-      className={`sticky flex justify-between items-center px-7  py-5 ${
+      className={`sticky flex justify-between items-center ${
         navScroll
-          ? `bg-[#343a46] max-w-7xl rounded-full mx-auto py-4 lg:px-16 top-2`
-          : `bg-[#1e201e] top-0 lg:px-20`
+          ? `bg-[#343a46] lg:max-w-7xl rounded-full mx-3 lg:mx-auto py-1 lg:py-4 px-4 lg:px-16 top-2 `
+          : `bg-[#1e201e] top-0 lg:px-20 py-4 px-7`
       } duration-300`}
     >
       <nav className='text-[#fa6743] font-bold hover:cursor-pointer'>
