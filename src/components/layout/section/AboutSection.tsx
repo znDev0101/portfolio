@@ -17,7 +17,8 @@ const AboutSection = forwardRef(({}, ref: React.ForwardedRef<HTMLElement>) => {
           Hi Everyone, I am Zulfa Nurhuda from Jakarta, Indonesian. I am
           currently work a freelance{" "}
           <code>Software Developer || Frontend Web Developer</code>, I am fresh
-          graduate
+          graduate, from Bachelor computer science, i have 2 years work
+          experience frontend web developer
         </p>
       </div>
     </section>
