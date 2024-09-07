@@ -40,7 +40,7 @@ const Card = ({
             <a
               href='https://tokped-clone-nu.vercel.app/'
               target='_blank'
-              className='flex items-center gap-x-2 bg-[#fa6743] font-bold py-1 px-4 rounded-md'
+              className='flex items-center gap-x-2 bg-[#fa6743] hover:bg-white hover:text-[#fa6743] font-bold py-1 px-4 rounded-md duration-300'
             >
               Demo
               <RiExternalLinkLine className='text-xl' />
@@ -48,7 +48,7 @@ const Card = ({
             <a
               href='https://github.com/znDev0101/TokpedClone'
               target='_blank'
-              className='flex items-center gap-x-2 bg-[#fa6743] font-bold py-1 px-4 rounded-md'
+              className='flex items-center gap-x-2 bg-[#fa6743]  hover:bg-white hover:text-[#fa6743]  font-bold py-1 px-4 rounded-md'
             >
               Source
               <IoLogoGithub className='text-xl' />

@@ -13,8 +13,8 @@ const Introdaction = () => {
           "Everything object in JS"
         </span>
       </div>
-      <button className='bg-[#fa6743] font-bold rounded-full p-3 mt-5 mx-auto lg:ms-0'>
-        Contact Me
+      <button className='bg-[#fa6743] hover:bg-white hover:text-[#fa6743] hover: border-2 border-[#fa6743] font-bold rounded-full p-3 mt-5 mx-auto lg:ms-0 duration-300'>
+        Download CV
       </button>
     </div>
   );

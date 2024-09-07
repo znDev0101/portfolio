@@ -32,35 +32,35 @@ const NavigationMenu = ({
       <ul
         className={`${
           isToggle ? `flex duration-700` : `hidden duration-700`
-        } flex-col items-center gap-y-7 m-auto justify-center border border-red-300 h-full duration-700`}
+        } flex-col items-center gap-y-7 m-auto justify-center h-full duration-700`}
       >
         <li
+          className='text-2xl font-semibold'
           onClick={() =>
             aboutRef.current.scrollIntoView({ behavior: "smooth" })
           }
         >
-          <a href='' className='text-3xl font-semibold'>
-            About
-          </a>
-        </li>
-        <li onClick={() => skillsRef.current.scrollIntoView()}>
-          <a href='' className='text-3xl font-semibold'>
-            Skills
-          </a>
-        </li>
-        <li onClick={() => projectsRef.current.scrollIntoView()}>
-          <a href='' className='text-3xl font-semibold'>
-            Projects
-          </a>
+          About
         </li>
         <li
+          className='text-2xl font-semibold'
+          onClick={() => skillsRef.current.scrollIntoView()}
+        >
+          Skills
+        </li>
+        <li
+          className='text-2xl font-semibold'
+          onClick={() => projectsRef.current.scrollIntoView()}
+        >
+          Projects
+        </li>
+        <li
+          className='text-2xl font-semibold'
           onClick={() =>
             contactRef.current.scrollIntoView({ behavior: "smooth" })
           }
         >
-          <a href='' className='text-3xl font-semibold'>
-            Contact
-          </a>
+          Contact
         </li>
       </ul>
     </div>
