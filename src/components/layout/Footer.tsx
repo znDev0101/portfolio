@@ -13,7 +13,9 @@ const Footer = forwardRef(({}, ref: React.ForwardedRef<HTMLElement>) => {
         <div className='ms-3 flex flex-col items-start justify-start  lg:items-center lg:flex-row gap-y-3 lg:gap-x-3 '>
           <div className='flex flex-col gap-y-3'>
             <div className='flex items-center gap-x-3'>
-              <MdOutlineMail size={35} />
+              <div className='w-8 h-8'>
+                <MdOutlineMail className='w-full h-full' />
+              </div>
               <h5>zulfanurhuda01@gmail.com</h5>
             </div>
             <a
@@ -21,21 +23,27 @@ const Footer = forwardRef(({}, ref: React.ForwardedRef<HTMLElement>) => {
               target='_blank'
               className='flex items-center gap-x-3'
             >
-              <FaLinkedin size={33} />
+              <div className='w-8 h-8'>
+                <FaLinkedin className='w-full h-full' />
+              </div>
               linkedin.com/in/zulfa-nurhuda-b8a7a825a
             </a>
           </div>
-          <div className='flex flex-col gap-y-3 px-2'>
+          <div className='flex flex-col gap-y-3 ps-1'>
             <div className='flex items-center gap-x-3'>
-              <FaPhoneAlt size={30} />
-              <h5>+6281318627769</h5>
+              <div className='w-6 h-6'>
+                <FaPhoneAlt className='w-full h-full' />
+              </div>
+              <h5>+62 81318627769</h5>
             </div>
             <a
               href='https://github.com/znDev0101'
               target='_blank'
-              className='flex items-center gap-x-3'
+              className='flex items-center gap-x-3 p-0'
             >
-              <IoLogoGithub size={30} />
+              <div className='w-7 h-7'>
+                <IoLogoGithub className='w-full h-full' />
+              </div>
               <h5>github.com/znDev0101</h5>
             </a>
           </div>
