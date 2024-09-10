@@ -4,6 +4,7 @@ import useDetectionScroll from "../hooks/useDetectionSection";
 interface NavigationMenuProps {
   isToggle: boolean;
   handleClick: any;
+  heroRef: any;
   aboutRef: any;
   skillsRef: any;
   projectsRef: any;
@@ -13,12 +14,14 @@ interface NavigationMenuProps {
 const NavigationMenu = ({
   isToggle,
   handleClick,
+  heroRef,
   aboutRef,
   skillsRef,
   projectsRef,
   contactRef,
 }: NavigationMenuProps) => {
   const { activeSection } = useDetectionScroll(
+    heroRef,
     aboutRef,
     skillsRef,
     projectsRef,

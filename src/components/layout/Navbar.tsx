@@ -41,6 +41,7 @@ const Navbar = ({
         <NavigationMenu
           handleClick={() => setIsToggleMenu(!isToggleMenu)}
           isToggle={isToggleMenu}
+          heroRef={heroRef}
           aboutRef={aboutRef}
           skillsRef={skillsRef}
           projectsRef={projectsRef}
