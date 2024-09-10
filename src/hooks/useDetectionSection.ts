@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 export default function useDetectionScroll(
+  heroRef: any,
   aboutRef: any,
   skillsRef: any,
   projectsRef: any,
@@ -9,6 +10,7 @@ export default function useDetectionScroll(
   const [activeSection, setActiveSection] = useState<string>("");
 
   const sectionRefs = [
+    { ref: heroRef, id: "hero" },
     { ref: aboutRef, id: "about" },
     { ref: skillsRef, id: "skills" },
     { ref: projectsRef, id: "projects" },
@@ -28,20 +30,20 @@ export default function useDetectionScroll(
     );
 
     sectionRefs.forEach((section) => {
-      if (section.ref.current) {
-        section.ref.current.id = section.id; // Ensure the DOM elements have proper IDs
+      if (section.ref && section.ref.current) {
+        section.ref.current.id = section.id;
         observer.observe(section.ref.current);
       }
     });
 
     return () => {
       sectionRefs.forEach((section) => {
-        if (section.ref.current) {
+        if (section.ref && section.ref.current) {
           observer.unobserve(section.ref.current);
         }
       });
     };
-  }, [aboutRef, skillsRef, projectsRef, contactRef]);
+  }, [heroRef, aboutRef, skillsRef, projectsRef, contactRef]);
 
   return { activeSection };
 }

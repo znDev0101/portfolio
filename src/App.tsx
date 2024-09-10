@@ -9,6 +9,7 @@ import SkillsSection from "./components/layout/section/SkillsSection";
 import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
+  const heroRef = useRef(null);
   const aboutRef = useRef(null);
   const skillsRef = useRef(null);
   const projectsRef = useRef(null);
@@ -32,6 +33,7 @@ function App() {
   return (
     <>
       <Navbar
+        heroRef={heroRef}
         aboutRef={aboutRef}
         skillsRef={skillsRef}
         projectsRef={projectsRef}
@@ -39,7 +41,7 @@ function App() {
         navScroll={navScroll}
       />
       <div className='relative w-full'>
-        <HeroSection />
+        <HeroSection ref={heroRef} />
         <AboutSection aboutRef={aboutRef} />
         <SkillsSection ref={skillsRef} />
         <ProjectsSection ref={projectsRef} />

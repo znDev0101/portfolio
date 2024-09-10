@@ -5,6 +5,7 @@ import NavigationMenu from "../NavigationMenu";
 import useDetectionScroll from "../../hooks/useDetectionSection";
 
 const Navbar = ({
+  heroRef,
   aboutRef,
   skillsRef,
   projectsRef,
@@ -14,6 +15,7 @@ const Navbar = ({
   const [isToggleMenu, setIsToggleMenu] = useState<boolean>(false);
 
   const { activeSection } = useDetectionScroll(
+    heroRef,
     aboutRef,
     skillsRef,
     projectsRef,
@@ -24,7 +26,7 @@ const Navbar = ({
     <header
       className={`sticky flex justify-between items-center ${
         navScroll
-          ? `bg-[#343a46] lg:max-w-7xl rounded-full mx-3 lg:mx-auto py-1 lg:py-4 px-4 lg:px-16 top-2 `
+          ? `bg-[#343a46] lg:max-w-7xl rounded-full mx-3 lg:mx-auto py-2 lg:py-4 px-4 lg:px-16 top-3 lg:top-2`
           : `bg-[#1e201e] top-0 lg:px-20 py-4 px-7`
       } duration-300 z-50`}
     >
@@ -48,6 +50,8 @@ const Navbar = ({
           <li
             className={`${
               activeSection == "about" ? `text-[#fa6743]` : `text-white`
+            }  ${
+              activeSection == "hero" && `text-white`
             } hover:text-[#fa6743] hover:cursor-pointer font-semibold duration-300`}
             onClick={() =>
               aboutRef.current.scrollIntoView({ behavior: "smooth" })
