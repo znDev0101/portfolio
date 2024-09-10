@@ -5,7 +5,7 @@ import React, { forwardRef } from "react";
 
 const Footer = forwardRef(({}, ref: React.ForwardedRef<HTMLElement>) => {
   return (
-    <footer className='w-full mt-28 py-10 lg:py-16 bg-[#343a46]' ref={ref}>
+    <footer className='w-full mt-20 py-10 lg:py-16 bg-[#343a46]' ref={ref}>
       <div className='max-w-5xl lg:m-auto flex flex-col lg:flex-row lg:items-center gap-y-3 lg:gap-x-32 justify-between'>
         <h1 className='text-center text-5xl lg:text-7xl mb-5 font-bold text-[#fa6743]'>
           Contact

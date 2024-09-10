@@ -38,12 +38,12 @@ function App() {
         contactRef={contactRef}
         navScroll={navScroll}
       />
-      <div className='w-full'>
+      <div className='relative w-full'>
         <HeroSection />
-        <AboutSection ref={aboutRef} />
+        <AboutSection aboutRef={aboutRef} />
         <SkillsSection ref={skillsRef} />
         <ProjectsSection ref={projectsRef} />
-        <ScrollToTop navScroll={navScroll} />
+        <ScrollToTop />
       </div>
       <Footer ref={contactRef} />
     </>

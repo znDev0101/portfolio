@@ -1,11 +1,10 @@
-import React, { forwardRef } from "react";
 import ImageAbout from "../../ImageAbout";
 
-const AboutSection = forwardRef(({}, ref: React.ForwardedRef<HTMLElement>) => {
+const AboutSection = ({ aboutRef }: { aboutRef: any }) => {
   return (
     <section
       className='flex flex-col lg:flex-row items-center gap-x-24 max-w-6xl mx-6 mt-20 lg:mx-auto p-5 lg:py-0 lg:px-10 bg-[#343a46] rounded-md'
-      ref={ref}
+      ref={aboutRef}
     >
       <ImageAbout />
       <div className='flex flex-col mt-10'>
@@ -23,6 +22,6 @@ const AboutSection = forwardRef(({}, ref: React.ForwardedRef<HTMLElement>) => {
       </div>
     </section>
   );
-});
+};
 
 export default AboutSection;
