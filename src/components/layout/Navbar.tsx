@@ -22,6 +22,8 @@ const Navbar = ({
     contactRef
   );
 
+  console.log(activeSection);
+
   return (
     <header
       className={`sticky flex justify-between items-center ${

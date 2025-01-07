@@ -1,4 +1,4 @@
-import myCv from "../documents/resume_frontend.pdf";
+import myCv from "../documents/resume-frontend.pdf";
 
 const Introdaction = () => {
   return (
