@@ -1,28 +1,16 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { HiMenu } from "react-icons/hi";
 
 import NavigationMenu from "../NavigationMenu";
 import useDetectionScroll from "../../hooks/useDetectionSection";
+import { RefsContext } from "../../context/RefContext";
 
-const Navbar = ({
-  heroRef,
-  aboutRef,
-  skillsRef,
-  projectsRef,
-  contactRef,
-  navScroll,
-}: any) => {
+const Navbar = ({ navScroll }: any) => {
   const [isToggleMenu, setIsToggleMenu] = useState<boolean>(false);
 
-  const { activeSection } = useDetectionScroll(
-    heroRef,
-    aboutRef,
-    skillsRef,
-    projectsRef,
-    contactRef
-  );
+  const refsContext = useContext(RefsContext);
 
-  console.log(activeSection);
+  const currentSection = useDetectionScroll(refsContext);
 
   return (
     <header
@@ -40,17 +28,12 @@ const Navbar = ({
           className='text-3xl lg:hidden'
           onClick={() => setIsToggleMenu(!isToggleMenu)}
         />
-        <NavigationMenu
+        {/* <NavigationMenu
           handleClick={() => setIsToggleMenu(!isToggleMenu)}
           isToggle={isToggleMenu}
-          heroRef={heroRef}
-          aboutRef={aboutRef}
-          skillsRef={skillsRef}
-          projectsRef={projectsRef}
-          contactRef={contactRef}
-        />
+        /> */}
         <ul className='hidden lg:flex gap-x-10 text-[#fa6743] '>
-          <li
+          {/* <li
             className={`${
               activeSection == "about" ? `text-[#fa6743]` : `text-white`
             }  ${
@@ -91,7 +74,7 @@ const Navbar = ({
             }
           >
             Contact
-          </li>
+          </li> */}
         </ul>
       </nav>
     </header>

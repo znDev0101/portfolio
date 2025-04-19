@@ -1,5 +1,7 @@
 import { CgClose } from "react-icons/cg";
 import useDetectionScroll from "../hooks/useDetectionSection";
+import { useContext } from "react";
+import { RefsContext } from "../context/RefContext";
 
 interface NavigationMenuProps {
   isToggle: boolean;
@@ -11,22 +13,10 @@ interface NavigationMenuProps {
   contactRef: any;
 }
 
-const NavigationMenu = ({
-  isToggle,
-  handleClick,
-  heroRef,
-  aboutRef,
-  skillsRef,
-  projectsRef,
-  contactRef,
-}: NavigationMenuProps) => {
-  const { activeSection } = useDetectionScroll(
-    heroRef,
-    aboutRef,
-    skillsRef,
-    projectsRef,
-    contactRef
-  );
+const NavigationMenu = ({ isToggle, handleClick }: NavigationMenuProps) => {
+  const refsContext = useContext(RefsContext);
+
+  const currentSection = useDetectionScroll(refsContext);
 
   return (
     <div
@@ -45,7 +35,7 @@ const NavigationMenu = ({
           isToggle ? `flex duration-700` : `hidden duration-700`
         } flex-col items-center gap-y-7 m-auto justify-center h-full duration-700`}
       >
-        <li
+        {/* <li
           className={`${
             activeSection == "about" ? "text-[#fa6743]" : "text-white"
           } text-2xl font-semibold`}
@@ -80,7 +70,7 @@ const NavigationMenu = ({
           }
         >
           Contact
-        </li>
+        </li> */}
       </ul>
     </div>
   );
